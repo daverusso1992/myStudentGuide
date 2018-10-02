@@ -1,7 +1,7 @@
 v1.2
 
-Consultazione personalizzata
-della Guida dello Studente e 
+Gestione personalizzata della
+Guida dello Studente e consultazione
 dell'offerta formativa della
 Laurea Magistrale in Informatica
 
