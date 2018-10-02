@@ -22,9 +22,9 @@ public class BoxHandler {
 
     public LinearLayout layout;
 
-    private ArrayList<CheckBox> arrayBox = new ArrayList();
-    private ArrayList<String> arrayBoxFilename = new ArrayList();
-    private ArrayList<String> arraySeparatorText = new ArrayList();
+    private ArrayList<CheckBox> arrayBox = new ArrayList<>();
+    private ArrayList<String> arrayBoxFilename = new ArrayList<>();
+    private ArrayList<String> arraySeparatorText = new ArrayList<>();
 
 
     public BoxHandler(Context con, LinearLayout layout){
