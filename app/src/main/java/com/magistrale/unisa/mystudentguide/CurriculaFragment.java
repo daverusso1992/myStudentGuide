@@ -1,5 +1,13 @@
+/*
+ * CurriculaFragment.java
+ *
+ * Copyright (c) 2018 myStudentGuide App
+ */
+
+// Package
 package com.magistrale.unisa.mystudentguide;
 
+// External Packages
 import android.annotation.TargetApi;
 import android.content.res.Resources;
 import android.os.Build;
@@ -18,6 +26,7 @@ import android.widget.TextView;
 
 import java.io.InputStream;
 
+// CurriculaFragment Class
 public class CurriculaFragment extends Fragment {
 
 
@@ -75,6 +84,7 @@ public class CurriculaFragment extends Fragment {
         //
         txt1 = new TextView(getContext());
         try {
+
             //COPY TEXT INSIDE "INFO.TXT" IN RAW FOLDER
             //AND INSERT IN THE NEW TEXT VIEW
             Resources res = getResources(); InputStream in_s = res.openRawResource(R.raw.zinfo);
@@ -91,6 +101,7 @@ public class CurriculaFragment extends Fragment {
         //
         txt2 = new TextView(getContext());
         try {
+
             //COPY TEXT INSIDE "DINFO.TXT" IN RAW FOLDER
             //AND INSERT IN THE NEW TEXT VIEW
             Resources res = getResources(); InputStream in_s = res.openRawResource(R.raw.zdinfo);
@@ -107,6 +118,7 @@ public class CurriculaFragment extends Fragment {
         //
         txt3 = new TextView(getContext());
         try {
+
             //COPY TEXT INSIDE "IINFO.TXT" IN RAW FOLDER
             //AND INSERT IN THE NEW TEXT VIEW
             Resources res = getResources(); InputStream in_s = res.openRawResource(R.raw.ziinfo);
@@ -123,6 +135,7 @@ public class CurriculaFragment extends Fragment {
         //
         txt4 = new TextView(getContext());
         try {
+
             //COPY TEXT INSIDE "SICINFO.TXT" IN RAW FOLDER
             //AND INSERT IN THE NEW TEXT VIEW
             Resources res = getResources(); InputStream in_s = res.openRawResource(R.raw.zsicinfo);
@@ -139,6 +152,7 @@ public class CurriculaFragment extends Fragment {
         //
         txt5 = new TextView(getContext());
         try {
+
             //COPY TEXT INSIDE "INFO.TXT" IN RAW FOLDER
             //AND INSERT IN THE NEW TEXT VIEW
             Resources res = getResources(); InputStream in_s = res.openRawResource(R.raw.zsisinfo);
@@ -159,8 +173,10 @@ public class CurriculaFragment extends Fragment {
             public void onClick(View view) {
 
                 if(flag){
+
                     //CREATE NEW TEXT VIEW
                     clayout.addView(txt1);
+
                     //CHANGE IMAGE FOR CURRICULUM
                     cloudC.setImageDrawable(ContextCompat.getDrawable(v.getContext(), R.drawable.cdown));
                     flag = !flag;
@@ -177,8 +193,10 @@ public class CurriculaFragment extends Fragment {
             public void onClick(View view) {
 
                 if(flag2){
+
                     //CREATE NEW TEXT VIEW
                     dlayout.addView(txt2);
+
                     //CHANGE IMAGE FOR CURRICULUM
                     data.setImageDrawable(ContextCompat.getDrawable(v.getContext(), R.drawable.ddown));
                     flag2 = !flag2;
@@ -195,8 +213,10 @@ public class CurriculaFragment extends Fragment {
             public void onClick(View view) {
 
                 if(flag3){
+
                     //CREATE NEW TEXT VIEW
                     ilayout.addView(txt3);
+
                     //CHANGE IMAGE FOR CURRICULUM
                     internet.setImageDrawable(ContextCompat.getDrawable(v.getContext(), R.drawable.idown));
                     flag3 = !flag3;
@@ -213,7 +233,11 @@ public class CurriculaFragment extends Fragment {
             public void onClick(View view) {
 
                 if(flag4){
+
+                    //CREATE NEW TEXT VIEW
                     siclayout.addView(txt4);
+
+                    //CHANGE IMAGE FOR CURRICULUM
                     sicurezza.setImageDrawable(ContextCompat.getDrawable(v.getContext(), R.drawable.sicdown));
                     flag4 = !flag4;
                 }else{
@@ -229,7 +253,11 @@ public class CurriculaFragment extends Fragment {
             public void onClick(View view) {
 
                 if(flag5){
+
+                    //CREATE NEW TEXT VIEW
                     sislayout.addView(txt5);
+
+                    //CHANGE IMAGE FOR CURRICULUM
                     sistemi.setImageDrawable(ContextCompat.getDrawable(v.getContext(), R.drawable.sisdown));
                     flag5 = !flag5;
                 }else{

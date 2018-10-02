@@ -1,5 +1,13 @@
+/*
+ * MainActivity.java
+ *
+ * Copyright (c) 2018 myStudentGuide App
+ */
+
+// Package
 package com.magistrale.unisa.mystudentguide;
 
+// External Packages
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
@@ -18,6 +26,7 @@ import android.widget.Toast;
 
 import java.io.File;
 
+// MainActivity Class
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
 
@@ -55,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
+
             //
             //CLICK ON MENU HOME BUTTON
             //
@@ -62,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new HomeFragment()).commit();
                 break;
+
             //
             //CLICK ON MENU OFFER BUTTON
             //
@@ -69,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new OfferFragment()).commit();
                 break;
+
             //
             //CLICK ON MENU CURRICULA BUTTON
             //
@@ -76,6 +88,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new CurriculaFragment()).commit();
                 break;
+
             //
             //CLICK ON MENU CONTACT BUTTON
             //
@@ -83,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new ContactFragment()).commit();
                 break;
+
             //
             //CLICK ON MENU CREATE OR MODIFY BUTTON
             //
@@ -90,10 +104,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new CreateFragment()).commit();
                 break;
+
             //
             //CLICK ON SHOW BUTTON
             //
             case R.id.nav_check_guide:
+
                 //
                 //OPEN THE PERSOLANIZED STUDENT GUIDE WITH A CLIENT PDF READER APP
                 //
@@ -117,10 +133,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     e.printStackTrace();
                 }
                 break;
+
             //
             //CLICK ON SHOW BUTTON
             //
             case R.id.nav_other:
+
                 //
                 //OPEN THE PERSOLANIZED STUDENT GUIDE WITH A CLIENT PDF READER APP
                 //
@@ -144,17 +162,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     e.printStackTrace();
                 }
                 break;
+
             //
             //CLICK ON SHARE BUTTON
             //
             case R.id.nav_share:
                 break;
+
             //
             //CLICK ON PRINT BROCHURE BUTTON
             //
             case R.id.nav_print:
                 Toast.makeText(this, "Hai premuto Stampa Brochure", Toast.LENGTH_SHORT).show();
                 break;
+
             //
             //CLICK ON WEB SITE BUTTON
             //
@@ -166,6 +187,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 intent.setData(Uri.parse("https://corsi.unisa.it/unisa-rescue-page/dettaglio/url/L2luZm9ybWF0aWNhL25ld3M%3D/id/1542/module/475/row/3255"));
                 startActivity(intent);
                 break;
+
             //
             //CLICK ON APP INFORMATION BUTTON
             //

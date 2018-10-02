@@ -1,5 +1,13 @@
+/*
+ * InfoFragment.java
+ *
+ * Copyright (c) 2018 myStudentGuide App
+ */
+
+// Package
 package com.magistrale.unisa.mystudentguide;
 
+// External Packages
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,9 +21,12 @@ import android.widget.TextView;
 
 import java.io.InputStream;
 
+// InfoFragment Class
 public class InfoFragment extends Fragment {
 
     View v;
+
+    // INFORMATION TEXTVIEW
     TextView txt;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -30,6 +41,7 @@ public class InfoFragment extends Fragment {
         //
         txt = v.findViewById(R.id.infoAppText);
         try {
+
             //COPY TEXT INSIDE "INFO.TXT" IN RAW FOLDER
             //AND INSERT IN THE NEW TEXT VIEW
             Resources res = getResources(); InputStream in_s = res.openRawResource(R.raw.zinfoapp);

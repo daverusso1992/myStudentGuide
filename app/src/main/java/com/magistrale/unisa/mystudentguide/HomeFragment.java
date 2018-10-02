@@ -1,5 +1,13 @@
+/*
+ * HomeFragment.java
+ *
+ * Copyright (c) 2018 myStudentGuide App
+ */
+
+// Package
 package com.magistrale.unisa.mystudentguide;
 
+// External Packages
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
@@ -17,9 +25,12 @@ import android.widget.Toast;
 
 import java.io.File;
 
+// HomeFragment Class
 public class HomeFragment extends Fragment {
 
     View v;
+
+    // BUTTON ON HOMEPAGE
     Button btn1;
     Button btn2;
     Button btn3;
@@ -44,6 +55,8 @@ public class HomeFragment extends Fragment {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // FRAGMENT ON SCREEN TO SHOW OfferFragment
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.fragment_container, new OfferFragment());
@@ -55,6 +68,8 @@ public class HomeFragment extends Fragment {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // FRAGMENT ON SCREEN TO SHOW CurriculaFragment
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.fragment_container, new CurriculaFragment());
@@ -66,6 +81,8 @@ public class HomeFragment extends Fragment {
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // FRAGMENT ON SCREEN TO SHOW ContactFragment
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.fragment_container, new ContactFragment());
@@ -77,6 +94,8 @@ public class HomeFragment extends Fragment {
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // FRAGMENT ON SCREEN TO SHOW CreateFragment
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.fragment_container, new CreateFragment());

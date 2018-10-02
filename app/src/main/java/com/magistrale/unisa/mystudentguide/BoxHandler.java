@@ -1,5 +1,13 @@
+/*
+ * BoxHandler.java
+ *
+ * Copyright (c) 2018 myStudentGuide App
+ */
+
+// Package
 package com.magistrale.unisa.mystudentguide;
 
+// External Packages
 import android.content.Context;
 import android.view.View;
 import android.widget.CheckBox;
@@ -8,6 +16,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+// BoxHandler Class
 public class BoxHandler {
     Context context;
 
@@ -15,11 +24,11 @@ public class BoxHandler {
 
     private ArrayList<CheckBox> arrayBox = new ArrayList();
     private ArrayList<String> arrayBoxFilename = new ArrayList();
-
     private ArrayList<String> arraySeparatorText = new ArrayList();
 
 
     public BoxHandler(Context con, LinearLayout layout){
+
         //CONTROLL CONTEXT AND LAYOUT
         this.context = con;
         this.layout = layout;
@@ -27,6 +36,7 @@ public class BoxHandler {
     }
 
     public void addCheckBox(String text, String filename){
+
         //CREATE CHECKBOX AND ADD DATA
         CheckBox box = new CheckBox(context);
         box.setText(text);
@@ -37,6 +47,7 @@ public class BoxHandler {
 
     //FIND A CHECKBOX MY TEXT
     public CheckBox findBoxByText(String text){
+
         CheckBox mybox = null;
         for(int i = 0; i < arrayBox.size(); i++){
             if(arrayBox.get(i).getText().equals(text)){
@@ -48,6 +59,7 @@ public class BoxHandler {
 
     //ADD A TEXT SEPARATOR BETWEEN GUIDE ARGUMENTS
     public void addTextSeparator(String text){
+
         //ADD A TEXTVIEW TO LAYOUT
         arraySeparatorText.add(text);
         TextView mytext= new TextView(context);
@@ -63,6 +75,7 @@ public class BoxHandler {
 
     //GET FILE NAME FROM TEXT
     public String getFileameFromText(String text){
+
         for(int i = 0; i < arrayBoxFilename.size(); i++){
             if (arrayBox.get(i).getText().equals(text)){
                 return arrayBoxFilename.get(i);

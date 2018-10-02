@@ -1,5 +1,13 @@
+/*
+ * CreateFragment.java
+ *
+ * Copyright (c) 2018 myStudentGuide App
+ */
+
+// Package
 package com.magistrale.unisa.mystudentguide;
 
+// External Packages
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.NonNull;
@@ -26,12 +34,20 @@ import java.io.OutputStream;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
+// CreateFragment Class
 public class CreateFragment extends Fragment  {
 
+    // FINAL DOCUMENT FIlE
     String resultDocFile;
     Document resultDoc;
+
+    // ARGUMENTS CONTROLLER
     BoxHandler handler;
+
+    // LAYOUT FOR CHECK-BOX
     LinearLayout layout;
+
+    // YEARS
     RadioGroup radio;
 
 
@@ -137,6 +153,7 @@ public class CreateFragment extends Fragment  {
                             os.write(buffer, 0, bytesRead);
                         }
                         ins1.close();
+
                         //flush OutputStream to write any buffered data to file
                         os.flush();
                         os.close();
@@ -195,9 +212,11 @@ public class CreateFragment extends Fragment  {
 
                     //CLOSE THE FILE GUIDE
                     resultDoc.close();
+
                     //SHOW CORRECT MESSAGE
                     Toast.makeText(getContext(), "GUIDA CREATA\n" + Environment.getExternalStorageDirectory() + "/myGuide.pdf", Toast.LENGTH_LONG).show();
                     Log.d("GUIDA CREATA",Environment.getExternalStorageDirectory() + "/myGuide.pdf");
+
                 } catch (Exception e){
                     e.printStackTrace();
                 }
