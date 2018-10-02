@@ -1,0 +1,92 @@
+package com.magistrale.unisa.mystudentguide;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+
+public class ContactFragment extends Fragment {
+
+    View v;
+    LinearLayout negro;
+    LinearLayout deLucia;
+    LinearLayout ferrucci;
+    LinearLayout deSantis;
+    LinearLayout polese;
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        v = inflater.inflate(R.layout.fragment_contact, container, false);
+
+        negro = v.findViewById(R.id.negroLayout);
+        deLucia = v.findViewById(R.id.deLuciaLayout);
+        ferrucci = v.findViewById(R.id.ferrucciLayout);
+        deSantis = v.findViewById(R.id.deSantisLayout);
+        polese = v.findViewById(R.id.poleseLayout);
+
+        //PROF. NEGRO CARD
+        negro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("plain/text");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "alberto@unisa.it" });
+                startActivity(Intent.createChooser(intent, ""));
+            }
+        });
+
+        //PROF. DE LUCIA CARD
+        deLucia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("plain/text");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "adelucia@unisa.it" });
+                startActivity(Intent.createChooser(intent, ""));
+            }
+        });
+
+        //PROF.SSA FERRUCCI CARD
+        ferrucci.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("plain/text");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "fferrucci@unisa.it" });
+                startActivity(Intent.createChooser(intent, ""));
+            }
+        });
+
+        //PROF. DE SANTIS CARD
+        deSantis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("plain/text");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "ads@unisa.it" });
+                startActivity(Intent.createChooser(intent, ""));
+            }
+        });
+
+        //PROF. POLESE CARD
+        polese.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("plain/text");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "gpolese@unisa.it" });
+                startActivity(Intent.createChooser(intent, ""));
+            }
+        });
+
+        return v;
+    }
+
+}

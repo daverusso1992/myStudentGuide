@@ -1,0 +1,29 @@
+
+INSEGNAMENTI OBBLIGATORI
+- Programmazione Concorrente, 
+  Parallela e su Cloud;
+- Reti Geografiche: struttura, analisi e prestazioni;
+- Architetture Distribuite per il Cloud;
+- Lingua Inglese;
+
+INSEGNAMENTI A SCELTA
+- Algoritmi Avanzati;
+- Automi, Linguaggi e Complessita';
+- Data Science e Machine Learning;
+- Integrazione Dati su Web;
+- Serverless Computing for IoT (English);
+- Sicurezza dei Dati;
+- Sistemi Operativi Avanzati;
+- Compressione Dati;
+- Functional Programming for
+  Scalable Computing (English);
+- Gestione dei Progetti Software;
+- Intelligenza Artificiale;
+- Metodi Numerici per l'Informatica;
+- Metriche e Qualita' del Software;
+- Rappresentazione e Trasmissione dell'Informazione:
+- Reti ad Hoc;
+- Reti Sociali;
+- Tecniche Automatiche per la 
+  Correttezza del Software;
+- Didattica dell'Informatica.

@@ -1,0 +1,29 @@
+
+INSEGNAMENTI OBBLIGATORI
+- Data Science e Machine Learning;
+- Statistica e Analisi dei Dati;
+- Basi di Dati II;
+- Intelligenza Artificiale;
+- Lingua Inglese;
+
+INSEGNAMENTI A SCELTA
+- Fondamenti di Visione Artificiale e Biometria;
+- Integrazione Dati su Web;
+- IoT Data Analytics (ENGLISH);
+- Sicurezza dei Dati;
+- Serverless Computing for IoT (English);
+- Sistemi Operativi Avanzati;
+- Algoritmi Avanzati;
+- Geographical Information Systems;
+- Information Visualization;
+- Web Semantico;
+- Architetture Distribuite per il Cloud;
+- Gestione dei Progetti Software;
+- Reti Sociali;
+- Affidabilita' dei Sistemi;
+- Interactive Systems Design (ENGLISH);
+- Metodi di Ottimizzazione;
+- Metodi Numerici per l'Informatica;
+- Programmazione Sicura;
+- Didattica dell'Informatica.
+

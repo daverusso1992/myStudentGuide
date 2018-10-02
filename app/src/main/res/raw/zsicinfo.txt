@@ -1,0 +1,29 @@
+
+INSEGNAMENTI OBBLIGATORI
+- Elementi di Crittografia;
+- Penetration Testing and Ethical Hacking;
+- Sicurezza dei Dati;
+- Lingua Inglese;
+- Cybersecurity
+
+INSEGNAMENTI A SCELTA
+- Algoritmi Avanzati;
+- Automi, Linguaggi e Complessita';
+- Basi di Dati II;
+- Fondamenti di Visione Artificiale e Biometrica;
+- Ingegneria, Gestione ed Evoluzione del Software;
+- Programmazione Concorrente, 
+  Parallela e suCloud;
+- Sistemi Operativi Avanzati;
+- Data Science e Machine Learning;
+- Compilatori;
+- Didattica dell'Informatica;
+- Digital Forensics;
+- Gestione dei Progetti Software;
+- Interactive Systems Design (ENGLISH);
+- Programmazione Sicura;
+- Rappresentazione e Trasmissione
+  dell'Informazione;
+- Reti Sociali;
+- Tecniche Automatiche per la 
+  Correttezza del Software.

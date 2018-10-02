@@ -1,0 +1,34 @@
+
+INSEGNAMENTI OBBLIGATORI
+- Basi di Dati II;
+- Compilatori;
+- Ingegneria, Gestione ed Evoluzione del Software;
+- Lingua Inglese;
+- Gestione dei Progetti Software;
+
+INSEGNAMENTI A SCELTA
+- Data Science e Machine Learning;
+- Automi, Linguaggi e Complessita';
+- Interazione Uomo-Macchina e
+  Usabilita' del Software;
+- Internet of Things (English);
+- Penetration Testing and Ethical Hacking;
+- Programmazione Concorrente, Parallela
+  e su Cloud;
+- Sicurezza dei Dati;
+- Statistica ed Analisi dei Dati;
+- Software Dependability (English);
+- Advanced Programming (English);
+- Affidabilita' dei Sistemi;
+- Human Computer Interaction and Experience
+  Design in the Internet of Things (English);
+- Didattica dell'Informatica;
+- Enterprise Mobile Application Development;
+- Financial Computing e Tecnologie
+  per l'High Frequency Trading;
+- Geographical Information Systems;
+- Programmazione Sicura;
+- Metriche e Qualita' del Software;
+- Sistemi Informativi Direzionali;
+- Tecniche Automatiche per la Correttezza
+  del Software;
