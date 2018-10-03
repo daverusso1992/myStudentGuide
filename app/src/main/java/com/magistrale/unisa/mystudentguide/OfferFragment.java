@@ -42,7 +42,7 @@ public class OfferFragment extends Fragment{
         //
         //CREATE INFO ABOUT OFFER
         //
-        txt = v.findViewById(R.id.infoAppText);
+        txt = v.findViewById(R.id.first_offer);
         try {
 
             //COPY TEXT INSIDE "ZOFFER.TXT" IN RAW FOLDER
@@ -59,7 +59,7 @@ public class OfferFragment extends Fragment{
         //
         //CREATE INFO ABOUT CURRICULA
         //
-        txt = v.findViewById(R.id.infoAppText);
+        txt = v.findViewById(R.id.textView);
         try {
 
             //COPY TEXT INSIDE "ZCURRICULA.TXT" IN RAW FOLDER
