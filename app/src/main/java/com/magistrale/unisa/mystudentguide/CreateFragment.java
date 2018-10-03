@@ -214,7 +214,8 @@ public class CreateFragment extends Fragment  {
                     resultDoc.close();
 
                     //SHOW CORRECT MESSAGE
-                    Toast.makeText(getContext(), "GUIDA CREATA\n" + Environment.getExternalStorageDirectory() + "/myGuide.pdf", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "GUIDA CREATA\n" +
+                            Environment.getExternalStorageDirectory() + "/myGuide.pdf", Toast.LENGTH_LONG).show();
                     Log.d("GUIDA CREATA",Environment.getExternalStorageDirectory() + "/myGuide.pdf");
 
                 } catch (Exception e){
