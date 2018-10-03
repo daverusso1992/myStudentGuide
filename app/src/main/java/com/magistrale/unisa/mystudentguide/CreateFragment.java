@@ -122,7 +122,7 @@ public class CreateFragment extends Fragment  {
                 //
                 //TAKE ALL THE PDF APP FILES IN "RAW" FOLDER AND PUT
                 //EVERY FILE NAMES IN AN ARRAYLIST, SO COPY ALL FILE
-                //IN THE NEW CREATED FOLDER "INFOMAGISTRALE"
+                //IN THE NEW CREATED FOLDER "MYSTUDENTGUIDE"
                 //
 
                 try {
