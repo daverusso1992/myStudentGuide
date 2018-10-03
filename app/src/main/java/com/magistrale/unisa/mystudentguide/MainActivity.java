@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_print:
 
                 //
-                //OPEN THE PERSOLANIZED STUDENT GUIDE WITH A CLIENT PDF READER APP
+                //OPEN THE INFO BROCHURE WITH A CLIENT PDF READER APP
                 //
                 File pdfFile3 = new File(Environment.getExternalStorageDirectory() +
                         "/infoBrochure.pdf"); //File path
