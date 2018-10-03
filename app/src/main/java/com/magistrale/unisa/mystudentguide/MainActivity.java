@@ -69,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             //CLICK ON MENU HOME BUTTON
             //
             case R.id.nav_main:
+
+                // SHOW THE HOMEPAGE
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new HomeFragment()).commit();
                 break;
@@ -77,6 +79,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             //CLICK ON MENU OFFER BUTTON
             //
             case R.id.nav_offer:
+
+                // SHOW THE OFFER PAGE
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new OfferFragment()).commit();
                 break;
@@ -85,6 +89,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             //CLICK ON MENU CURRICULA BUTTON
             //
             case R.id.nav_curriculum:
+
+                // SHOW THE CURRICULA PAGE
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new CurriculaFragment()).commit();
                 break;
@@ -93,6 +99,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             //CLICK ON MENU CONTACT BUTTON
             //
             case R.id.nav_contact:
+
+                // SHOW THE CONTACT PAGE
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new ContactFragment()).commit();
                 break;
@@ -101,6 +109,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             //CLICK ON MENU CREATE OR MODIFY BUTTON
             //
             case R.id.nav_create_guide:
+
+                // SHOW THE STUDENT GUIDE MANAGING PAGE
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new CreateFragment()).commit();
                 break;
@@ -113,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 //
                 //OPEN THE PERSOLANIZED STUDENT GUIDE WITH A CLIENT PDF READER APP
                 //
-                File pdfFile = new File(Environment.getExternalStorageDirectory() + "/myGuide.pdf");//File path
+                File pdfFile = new File(Environment.getExternalStorageDirectory() + "/myGuide.pdf"); //File path
                 try {
                     if (pdfFile.exists()) //Checking if the file exists or not
                     {
@@ -123,9 +133,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         objIntent.setFlags(Intent. FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(objIntent);//Starting the pdf viewer
                     } else {
+
+                        //  THERE IS NO FILE
                         Toast.makeText(this, "NO FILE! ", Toast.LENGTH_SHORT).show();
                     }
                 } catch (ActivityNotFoundException e) {
+
+                    // THERE IS NO APPLICATION TO OPEN PDF DOCUMENT
                     Toast.makeText(this,
                             "No Viewer Application Found", Toast.LENGTH_SHORT)
                             .show();
@@ -135,14 +149,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             //
-            //CLICK ON SHOW BUTTON
+            //CLICK ON PRINT AND SHARE BUTTON
             //
             case R.id.nav_other:
 
                 //
-                //OPEN THE PERSOLANIZED STUDENT GUIDE WITH A CLIENT PDF READER APP
+                //OPEN THE PERSOLANIZED STUDENT GUIDE WITH A CLIENT PRINT OR SHARE DOCUMENT APP
                 //
-                File pdfFile2 = new File(Environment.getExternalStorageDirectory() + "/myGuide.pdf");//File path
+                File pdfFile2 = new File(Environment.getExternalStorageDirectory() + "/myGuide.pdf"); //File path
                 try {
                     if (pdfFile2.exists()) //Checking if the file exists or not
                     {
@@ -152,9 +166,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         objIntent.setFlags(Intent. FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(objIntent);//Starting the pdf viewer
                     } else {
+
+                        // THERE IS NO FILE
                         Toast.makeText(this, "NO FILE! ", Toast.LENGTH_SHORT).show();
                     }
                 } catch (ActivityNotFoundException e) {
+
+                    // THERE IS NO APPLICATION TO SHARE OR PRINT DOCUMENT
                     Toast.makeText(this,
                             "No Viewer Application Found", Toast.LENGTH_SHORT)
                             .show();
@@ -173,17 +191,47 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             //CLICK ON PRINT BROCHURE BUTTON
             //
             case R.id.nav_print:
-                Toast.makeText(this, "Hai premuto Stampa Brochure", Toast.LENGTH_SHORT).show();
+
+                //
+                //OPEN THE PERSOLANIZED STUDENT GUIDE WITH A CLIENT PDF READER APP
+                //
+                File pdfFile3 = new File(Environment.getExternalStorageDirectory() +
+                        "/infoBrochure.pdf"); //File path
+                try {
+                    if (pdfFile3.exists()) //Checking if the file exists or not
+                    {
+                        Uri path = Uri.parse("content://" + pdfFile3 );
+                        Intent objIntent = new Intent(Intent.ACTION_VIEW);
+                        objIntent.setDataAndType(path, "application/pdf");
+                        objIntent.setFlags(Intent. FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(objIntent);//Starting the pdf viewer
+                    } else {
+
+                        //  THERE IS NO FILE
+                        Toast.makeText(this, "NO FILE! ", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (ActivityNotFoundException e) {
+
+                    // THERE IS NO APPLICATION TO OPEN PDF DOCUMENT
+                    Toast.makeText(this,
+                            "No Viewer Application Found", Toast.LENGTH_SHORT)
+                            .show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 break;
 
             //
             //CLICK ON WEB SITE BUTTON
             //
             case R.id.nav_website:
-                //OPEN A WEB PAGE TO OTHER INFORMATIONS
+
+                //OPEN A WEB PAGE TO OTHER INFORMATION
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
+
+                //URL
                 intent.setData(Uri.parse("https://corsi.unisa.it/unisa-rescue-page/dettaglio/url/L2luZm9ybWF0aWNhL25ld3M%3D/id/1542/module/475/row/3255"));
                 startActivity(intent);
                 break;
@@ -192,10 +240,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             //CLICK ON APP INFORMATION BUTTON
             //
             case R.id.nav_infoApp:
+
+                // SHOW THE APPLICATION INFORMATION PAGE
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new InfoFragment()).commit();
                 break;
         }
+
+        // CLOSE THE MENU'
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
