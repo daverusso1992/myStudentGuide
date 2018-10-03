@@ -232,7 +232,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
 
                 //URL
-                intent.setData(Uri.parse("https://corsi.unisa.it/unisa-rescue-page/dettaglio/url/L2luZm9ybWF0aWNhL25ld3M%3D/id/1542/module/475/row/3255"));
+                intent.setData(Uri.parse("https://corsi.unisa.it/unisa-rescue-page/dettaglio/url" +
+                        "/L2luZm9ybWF0aWNhL25ld3M%3D/id/1542/module/475/row/3255"));
                 startActivity(intent);
                 break;
 
