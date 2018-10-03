@@ -144,7 +144,7 @@ public class CreateFragment extends Fragment  {
 
                         String doc1 = Environment.getExternalStorageDirectory() + "/myStudentGuide/"+ filenames.get(i)+".pdf";
 
-                        //READ ALL FILE AND PUT INTO THE NEW INFOMAGISTRALE FOLDER
+                        //READ ALL FILE AND PUT INTO THE NEW MYSTUDENTGUIDE FOLDER
                         OutputStream os = new FileOutputStream(doc1);
                         byte[] buffer = new byte[1024];
                         int bytesRead;
