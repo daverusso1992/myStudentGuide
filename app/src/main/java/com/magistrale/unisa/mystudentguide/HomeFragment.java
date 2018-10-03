@@ -107,10 +107,11 @@ public class HomeFragment extends Fragment {
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 //
                 //OPEN THE PERSOLANIZED STUDENT GUIDE WITH A CLIENT PDF READER APP
                 //
-                File pdfFile = new File(Environment.getExternalStorageDirectory() + "/myGuide.pdf");//File path
+                File pdfFile = new File(Environment.getExternalStorageDirectory() + "/myGuide.pdf"); //File path
                 try {
                     if (pdfFile.exists()) //Checking if the file exists or not
                     {
@@ -120,9 +121,13 @@ public class HomeFragment extends Fragment {
                         objIntent.setFlags(Intent. FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(objIntent);//Starting the pdf viewer
                     } else {
+
+                        //  THERE IS NO FILE
                         Toast.makeText(getContext(), "NO FILE! ", Toast.LENGTH_SHORT).show();
                     }
                 } catch (ActivityNotFoundException e) {
+
+                    // THERE IS NO APPLICATION TO OPEN PDF DOCUMENT
                     Toast.makeText(getContext(),
                             "No Viewer Application Found", Toast.LENGTH_SHORT)
                             .show();
@@ -137,6 +142,33 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                //
+                //OPEN THE INFO BROCHURE WITH A CLIENT PDF READER APP
+                //
+                File pdfFile3 = new File(Environment.getExternalStorageDirectory() +
+                        "/infoBrochure.pdf"); //File path
+                try {
+                    if (pdfFile3.exists()) //Checking if the file exists or not
+                    {
+                        Uri path = Uri.parse("content://" + pdfFile3 );
+                        Intent objIntent = new Intent(Intent.ACTION_VIEW);
+                        objIntent.setDataAndType(path, "application/pdf");
+                        objIntent.setFlags(Intent. FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(objIntent);//Starting the pdf viewer
+                    } else {
+
+                        //  THERE IS NO FILE
+                        Toast.makeText(getContext(), "NO FILE! ", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (ActivityNotFoundException e) {
+
+                    // THERE IS NO APPLICATION TO OPEN PDF DOCUMENT
+                    Toast.makeText(getContext(),
+                            "No Viewer Application Found", Toast.LENGTH_SHORT)
+                            .show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 
