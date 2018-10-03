@@ -71,7 +71,7 @@ public class CreateFragment extends Fragment  {
 
         //CREATE THE EXTERNAL STORAGE DIRECTORY PATH
         final String env = Environment.getExternalStorageDirectory().toString();
-        final String path = env + "/InfoMagistrale/";
+        final String path = env + "/myStudentGuide/";
 
         //
         //CREATE ALL GUIDE ARGUMENTS, ADD CHECKBOX AND ANY OTHER VIEW-----------------------
@@ -113,7 +113,7 @@ public class CreateFragment extends Fragment  {
                 //
                 //CREATE A PUBLIC FOLDER TO COPY THE PDF APP FILES
                 //
-                String appFolder = "InfoMagistrale";
+                String appFolder = "myStudentGuide";
                 File f = new File(Environment.getExternalStorageDirectory(), appFolder);
                 if (!f.exists()) {
                     f.mkdirs();
@@ -142,7 +142,7 @@ public class CreateFragment extends Fragment  {
                                 getResources().getIdentifier(filenames.get(i),
                                         "raw", getActivity().getPackageName()));
 
-                        String doc1 = Environment.getExternalStorageDirectory() + "/InfoMagistrale/"+ filenames.get(i)+".pdf";
+                        String doc1 = Environment.getExternalStorageDirectory() + "/myStudentGuide/"+ filenames.get(i)+".pdf";
 
                         //READ ALL FILE AND PUT INTO THE NEW INFOMAGISTRALE FOLDER
                         OutputStream os = new FileOutputStream(doc1);
@@ -186,7 +186,7 @@ public class CreateFragment extends Fragment  {
                     if(radio.getCheckedRadioButtonId() == R.id.radioYearEighteen){ yearLetter = "a"; }
 
                     //CREATE THE COVER PAGE FILE NAME
-                    final String cover = env + "/InfoMagistrale/" + yearLetter + "copertina.pdf";
+                    final String cover = env + "/myStudentGuide/" + yearLetter + "copertina.pdf";
 
                     //ADD THE COVER TO THE FINAL GUIDE
                     PdfReader reader = new PdfReader(cover);
