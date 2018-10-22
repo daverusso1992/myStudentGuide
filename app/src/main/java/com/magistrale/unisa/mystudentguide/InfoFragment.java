@@ -42,8 +42,8 @@ public class InfoFragment extends Fragment {
         txt = v.findViewById(R.id.infoAppText);
         try {
 
-            //COPY TEXT INSIDE "INFO.TXT" IN RAW FOLDER
-            //AND INSERT IN THE NEW TEXT VIEW
+            // COPY TEXT INSIDE "INFO.TXT" IN RAW FOLDER
+            // AND INSERT IN THE NEW TEXT VIEW
             Resources res = getResources(); InputStream in_s = res.openRawResource(R.raw.zinfoapp);
             byte[] b = new byte[in_s.available()];
             in_s.read(b);
